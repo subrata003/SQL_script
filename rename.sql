@@ -7,7 +7,6 @@ age INT,
 department VARCHAR(50),
 city VARCHAR(50),
 salary INT UNSIGNED
-
 );
 
 INSERT INTO employee(eid,name,age,department,city,salary)
@@ -54,8 +53,20 @@ RENAME TO emp;
 
 -- rename database -- this is not support in sql so Create new DB → move tables → drop old DB
 RENAME DATABASE xyz To abc;
+USE xyz;
 
 SELECT * FROM emp;
 
+-- DISTINCT keyword
+
+SELECT DISTINCT city FROM emp;
+SELECT DISTINCT city ,name FROM emp;
+
+-- aggregate function
+SELECT COUNT(name) FROM emp;
+SELECT SUM(salary) FROM emp;
+SELECT AVG(salary) FROM emp;
+SELECT MIN(salary) FROM emp;
+SELECT MAX(salary) FROM emp;
 
  
